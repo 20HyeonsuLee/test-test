@@ -15,9 +15,6 @@ public class Main {
     public static void dfs(int node) {
         visited[node] = true;
 
-        early[node][0] = 0;
-        early[node][1] = 1;
-
         for (int child : tree.get(node)) {
             if (visited[child]) continue;
             dfs(child);
